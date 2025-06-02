@@ -1,0 +1,132 @@
+/* Signup.css */
+
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container for form */
+.signup-container {
+  min-height: 100vh;
+   background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* White card for form */
+.signup-content {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+/* Form heading */
+.signup-form h3 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Input groups */
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Input fields */
+.input-group input {
+  width: 100%;
+  padding: 14px 45px 14px 15px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #00040a;
+  outline: none;
+}
+
+/* Password toggle icon */
+.password-group {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: #000814;
+}
+
+utton[type="submit"] {
+  width: 100%;
+  background-color: #222;
+  border: none;
+  color: #fff;
+  padding: 10px 14px; /* reduced size */
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.loading {
+  margin-top: 20px;
+  color: #777;
+  font-style: italic;
+}
+
+.error {
+  margin-top: 20px;
+  background-color: #ffd6d6;
+  padding: 12px 18px;
+  border-radius: 12px;
+  color: #a30000;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+.login-link {
+  margin-top: 25px;
+  color: #444;
+  font-size: 1rem;
+}
+
+.login-link a {
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
