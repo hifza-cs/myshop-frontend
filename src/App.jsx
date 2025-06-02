@@ -75,6 +75,7 @@ console.log(dashboard);
           />
         </Routes>
   </div>
+  <Footer/>
     </>
   );
 };
