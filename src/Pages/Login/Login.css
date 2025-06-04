@@ -11,11 +11,16 @@
 /* Container for form */
 .signup-container {
   min-height: 100vh;
-   background-color: #f7f7f7;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
 }
 
 /* White card for form */

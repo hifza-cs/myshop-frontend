@@ -4,7 +4,7 @@ import heroVideo from "../../assets/video.mp4";
 import { useNavigate } from "react-router-dom";
 import FAQ from "../../components/FAQ/FAQ.jsx";
 import About from "../About/About";
-import ProductSlider from "../../components/ProductSlider/ProductSlider";
+import ProductSlider from "../../components/ProductSlider/ProductSlider.jsx";
 
 
 <ProductSlider />

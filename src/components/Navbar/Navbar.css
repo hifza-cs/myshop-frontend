@@ -1,355 +1,190 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background: white;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  z-index: 9999;
-  box-shadow: 0 4px 10px rgba(8, 0, 0, 0.1);
+  background: #fdfdfd;
+  padding: 8px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 90px;
+  flex-wrap: wrap;
 }
 
-/* Logo Section */
-.logo-section {
+.left-section {
   display: flex;
   align-items: center;
-  gap: 16px;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: transform 0.3s ease;
+  gap: 20px;
 }
 
 .logo-img {
-  width: 90px;
-  height: 75px;
-  object-fit: cover;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  animation: continuousRotate 3s linear infinite;
-  transition: transform 0.3s ease-in-out;
-}
-
-.logo-img:hover {
-  animation: continuousRotate 2s linear infinite;
-}
-
-.brand-name {
-  font-size: 1.8rem;
-  color: rgb(12, 0, 0);
-  font-family: "Segoe UI", sans-serif;
-  font-weight: 500;
-  text-shadow: 2px 2px 10px rgba(215, 224, 230, 0.884);
-  transition: color 0.3s ease;
-}
-
-.brand-name:hover {
-  color: #959196;
-}
-
-/* Navigation Links */
-.nav-links {
-  position: relative;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  padding-right: 20px;
-}
-
-.nav-links li .link {
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: rgb(8, 0, 0);
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  font-family: "Segoe UI", sans-serif;
-  letter-spacing: 0.5px;
-}
-
-.nav-links li .link:hover {
-  color: #83817e;
-  transform: translateY(-4px);
-  background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Dropdown (Bootstrap) */
-.dropdown {
-  display: flex;
-  align-items: center;
-}
-
-.dropdown-toggle {
+  animation: rotateLogo 6s linear infinite;
   cursor: pointer;
 }
 
-.dropdown-menu {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  min-width: 120px;
+.search-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
 }
 
-.dropdown-item {
-  font-family: "Segoe UI", sans-serif;
-  font-size: 1rem;
-  padding: 8px 16px;
-  transition: background 0.3s ease;
+.search-input {
+  padding: 5px 14px;
+  border-radius: 25px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  width: 180px;
+  transition: border-color 0.3s ease;
 }
 
-.dropdown-item:hover {
-  background: rgba(0, 0, 0, 0.1);
+.search-input:focus {
+  border-color: #01060c;
 }
 
-/* Hamburger Menu */
+.icon-btn {
+  font-size: 22px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-top: 8px;
+}
+
+.icon-btn:hover {
+  color: #00060c;
+  transform: scale(1.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+  transition: all 0.3s ease;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #00070e;
+  border-bottom: 2px solid #007bff;
+}
+
 .menu-icon {
   display: none;
-  font-size: 2.2rem;
-  color: rgb(19, 0, 0);
+  font-size: 28px;
   cursor: pointer;
+  padding: 5px;
+  user-select: none;
 }
 
-/* Modal Overlay */
+@keyframes rotateLogo {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Modal styles */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 3000;
-  animation: fadeIn 0.4s ease-in-out;
+  justify-content: center;
+  z-index: 2000;
 }
 
-/* Modal Box */
 .modal-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
   position: relative;
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-  animation: popIn 0.3s ease;
-  max-width: 90%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 .modal-logo {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+  width: 300px;
 }
 
-/* Close Modal Button */
-.close-modal {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #222;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 36px;
-  background: white;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
+/* Responsive styles */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
 
-.close-modal:hover {
-  transform: rotate(90deg);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes popIn {
-  0% {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes continuousRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
+  .left-section {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
   .nav-links {
+    width: 100%;
+    flex-direction: column;
     display: none;
+    padding: 10px 0;
+    background-color: rgb(255, 249, 249);
     position: absolute;
     top: 90px;
     left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    padding: 20px;
-    z-index: 9998;
+    right: 0;
+    z-index: 999;
   }
 
   .nav-links.active {
     display: flex;
-  }
-
-  .nav-links li {
-    margin: 12px 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links li .link {
-    font-size: 1.3rem;
-    color: white;
-    padding: 12px;
-    display: block;
-  }
-
-  .nav-links li .link:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: rgb(240, 230, 230);
-    transform: none;
-  }
-
-  .dropdown {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .dropdown-menu {
-    width: 100%;
-    text-align: center;
-  }
-
-  .dropdown-item {
-    font-size: 1.2rem;
-    padding: 10px;
-    color: rgb(245, 247, 248);
-  }
-
-  .brand-name {
-    font-size: 1.4rem;
-  }
-
-  .logo-img {
-    width: 70px;
-    height: 60px;
-  }
-
-  .modal-box {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .modal-logo {
-    width: 100%;
-  }
-
-  .close-modal {
-    top: -10px;
-    right: -10px;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    height: 70px;
-    padding: 0 15px;
-  }
-
-  .logo-section {
-    gap: 10px;
-    margin-left: 5px;
-  }
-
-  .logo-img {
-    width: 50px;
-    height: 40px;
-  }
-
-  .brand-name {
-    font-size: 1.2rem;
+    align-items: center;
+    
   }
 
   .menu-icon {
-    font-size: 1.8rem;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 36px;
+    z-index: 1000;
   }
 
-  .nav-links {
-    top: 70px;
-    padding: 15px;
+  .search-cart {
+    justify-content: center;
+    width: 100%;
+    margin-top: 18px;
+    margin-right:85px;
   }
+.logo-img{
+  margin-top:12px;
+  width: 80px;
+  height: 80px;
+}
 
-  .nav-links li .link {
-    font-size: 1.1rem;
-    padding: 10px;
-    color: aliceblue;
-  }
 
-  .dropdown-item {
-    font-size: 1rem;
-  }
 
-  .modal-box {
-    padding: 15px;
-  }
-
-  .modal-logo {
-    max-width: 250px;
-  }
-
-  .close-modal {
-    top: -8px;
-    right: -8px;
-    width: 25px;
-    height: 25px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 }

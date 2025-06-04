@@ -1,4 +1,9 @@
-/* White Background Theme */
+.about-container {
+  background-color: #ffffff; /* Set white background */
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .bw-theme {
   color: #080000;
   padding: 40px 20px;
@@ -6,18 +11,19 @@
   line-height: 1.6;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #fff; /* Ensure white */
 }
 
 .main-heading {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 30px;
   color: #111;
   border-bottom: 2px solid #111;
   display: inline-block;
   padding-bottom: 5px;
   margin-top: 12px;
-  margin-left: 500px;
+  width: 100%;
 }
 
 .about-hero-image {
@@ -31,7 +37,6 @@
 
 .about-hero-image:hover {
   transform: scale(1.02);
-  /* box-shadow removed */
 }
 
 .about-content {
@@ -44,13 +49,12 @@
   padding: 35px 40px;
   margin: 30px 0;
   border-radius: 18px;
-  /* box-shadow removed */
+  background-color: #fff;
   transition: transform 0.3s ease;
 }
 
 .about-card:hover {
   transform: translateY(-6px);
-  /* box-shadow removed */
 }
 
 .section-title {
@@ -123,10 +127,8 @@
   padding: 30px 20px;
   text-align: center;
   border-radius: 18px;
-  /* box-shadow removed */
-  transition: box-shadow 0.3s ease;
+  background-color: #f9f9f9;
 }
-
 
 .stat-box h3 {
   font-size: 2.5rem;
@@ -151,14 +153,12 @@
   margin-top: 30px;
   transition: background-color 0.3s ease;
   font-weight: 700;
-  display: inline-block;
-  text-align: center;
-  background-color: transparent; /* remove bg if you want */
+  background-color: transparent;
+  border: 2px solid #000;
 }
 
 .cta-button:hover {
   background-color: #000c0c;
-  /* box-shadow removed */
   color: white;
 }
 
@@ -166,11 +166,9 @@
 .slide-in {
   animation: slideIn 1s ease forwards;
 }
-
 .zoom-in {
   animation: zoomIn 1s ease forwards;
 }
-
 .fade-in {
   animation: fadeIn 1.5s ease forwards;
 }
@@ -178,21 +176,27 @@
 /* Responsive Design */
 @media (max-width: 992px) {
   .main-heading {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+    margin-left: 0;
   }
+
   .about-card {
     padding: 25px 30px;
   }
+
   .journey-stats {
     gap: 18px;
   }
+
   .stat-box {
-    flex: 1 1 140px;
+    flex: 1 1 45%;
     padding: 20px 15px;
   }
+
   .stat-box h3 {
     font-size: 2rem;
   }
+
   .cta-button {
     font-size: 1.1rem;
     padding: 14px 28px;
@@ -201,19 +205,23 @@
 
 @media (max-width: 600px) {
   .main-heading {
-    font-size: 2.2rem;
-    letter-spacing: 2.5px;
+    font-size: 2rem;
+    letter-spacing: 1px;
   }
+
   .about-card {
     padding: 20px 20px;
   }
+
   .journey-stats {
     flex-direction: column;
     gap: 15px;
   }
+
   .stat-box {
-    min-width: 100%;
+    width: 100%;
   }
+
   .cta-button {
     width: 100%;
     padding: 16px 0;

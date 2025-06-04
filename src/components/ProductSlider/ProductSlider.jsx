@@ -14,12 +14,12 @@ import blushImage from "../../assets/blush.jpg";
 import shopVideo from "../../assets/video2.mp4";
 
 const products = [
-  { id: 1, name: "Makeup Kit", price: "Rs. 1,200", image: kitImage },
-  { id: 2, name: "Lipstick Set", price: "Rs. 850", image: lipstickImage },
-  { id: 3, name: "Perfume", price: "Rs. 1,750", image: perfumeImage },
-  { id: 4, name: "Mascara", price: "Rs. 950", image: mascaraImage },
-  { id: 5, name: "Eyeliner", price: "Rs. 500", image: eyelinerImage },
-  { id: 6, name: "Blush Palette", price: "Rs. 1,100", image: blushImage },
+  { id: 1, name: "Makeup Kit", price: 1200, image: kitImage },
+  { id: 2, name: "Lipstick Set", price: 850, image: lipstickImage },
+  { id: 3, name: "Perfume", price: 1750, image: perfumeImage },
+  { id: 4, name: "Mascara", price: 950, image: mascaraImage },
+  { id: 5, name: "Eyeliner", price: 500, image: eyelinerImage },
+  { id: 6, name: "Blush Palette", price: 1100, image: blushImage },
 ];
 
 const ProductSlider = () => {
@@ -43,18 +43,18 @@ const ProductSlider = () => {
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <div className="product-card">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="product-image"
-              />
-              <h3 className="product-name">{product.name}</h3>
-              <p className="product-price">{product.price}</p>
-              <Link to="/shop" className="product-link">
-                View in Shop
-              </Link>
-            </div>
+            <Link to="/shop" className="product-card-link">
+              <div className="product-card-box">
+                <img
+                  src={product.image}
+                  className="product-image1"
+                  alt={product.name}
+                />
+                <h3 className="product-name">{product.name}</h3>
+                <p className="product-price">Rs. {product.price.toLocaleString()}</p>
+                <span className="product-link1">Order Now</span>
+              </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaWhatsapp, FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaGooglePlusG, FaLinkedin } from 'react-icons/fa';
 import './Footer.css';
 import logo from "../../assets/Logo.png";
 
@@ -8,7 +8,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-
         {/* Logo and Description */}
         <div className="footer-section brand">
           <Link to="/" className="footer-logo-link">
@@ -17,38 +16,33 @@ const Footer = () => {
           <p className="footer-text">Empowering Women Entrepreneurs with resources, networking, and support.</p>
         </div>
 
-        {/* Quick Links */}
-        <div className="footer-section links">
-          <h4 className="footer-heading">Quick Links</h4>
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/privacy">Privacy Policy</Link>
+        {/* Social Icons */}
+        <div className="social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <FaFacebook />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="https://plus.google.com" target="_blank" rel="noreferrer">
+            <FaGooglePlusG />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
         </div>
 
-        {/* Contact Info */}
-        <div className="footer-section contact">
-          <h4 className="footer-heading">Connect With Me</h4>
-
-          <a href="https://wa.me/923104236596" target="_blank" rel="noreferrer">
-            <FaWhatsapp /> 0310 4236596
-          </a>
-
-          <a href="https://www.linkedin.com/in/hifsa" target="_blank" rel="noreferrer">
-            <FaLinkedin /> LinkedIn: Hifsa
-          </a>
-
-          <a href="mailto:h09816hafsa@gmail.com">
-            <FaEnvelope /> h09816hafsa@gmail.com
-          </a>
-
-          <a href="https://github.com/hifza-cs" target="_blank" rel="noreferrer">
-            <FaGithub /> GitHub: hifza-cs
-          </a>
+        {/* Quick Links */}
+        <div className="footer-section links">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/shop">Shop</Link>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} WomenHub. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} WomenHub</p>
       </div>
     </footer>
   );

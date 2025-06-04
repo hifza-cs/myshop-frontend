@@ -1,152 +1,145 @@
 .product-slider-container {
   padding: 40px 20px;
-  color: #111;
-  font-family: 'Segoe UI', sans-serif;
-  
-  
+background-color: white;  
 }
 
 .slider-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 32px;
+  font-weight: bold;
   margin-bottom: 30px;
-  color: #111;
-  border-bottom: 2px solid #111;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-top: 12px;
-  margin-left: 600px;
+  margin-top: 2px;;
 }
 
-.product-card {
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 10px;
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  margin-top: 22px;
+  
+}
+
+.product-card-box {
+  border-radius: 15px;
+  padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease;
-  height: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 10px;
-  margin-top: 60px;
+  margin-top: 22px;
+  
 }
 
-.product-card:hover {
+.product-card-box:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.product-image {
-  width: 100%;
-  height: 160px;
-  object-fit: contain;
-  border-radius: 8px;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-  filter: none !important; /* ✅ forces original color */
-}
-
-
-.product-image:hover {
-  transform: scale(1.03);
+.product-image1 {
+  width: 60%;
+  height: 280px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 12px;
+  margin-left: 74px;
 }
 
 .product-name {
-  font-size: 1rem;
-  margin-top: 8px;
-  color: #111;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
 .product-price {
+  font-size: 16px;
   color: #333;
-  margin-bottom: 8px;
 }
 
-.product-link {
+.product-link1 {
   display: inline-block;
-  width: 100px;
-  height: 35px;
-  background-color: #0c0000;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-align: center;
-  line-height: 35px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  margin: 0 auto; /* Optional if button is a block element */
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 200px;
+  margin-left: 110px;
+
 }
 
-
-.product-link:hover {
-  background-color: #333;
+.product-link1:hover {
+  background: #000;
   color: #fff;
 }
 
-.product-card {
-  text-align: center;
-}
-
-
-/* Video + Text Section */
+/* Video section */
 .video-detail-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 50px;
-  align-items: center;
   justify-content: space-between;
-  flex-direction: row;
-  margin-top: 70px;
+  margin-top: 70px; /* Top margin added */
+  gap: 30px;
+  padding: 0 20px;
+  
 }
 
 .detail-box {
-  flex: 1 1 45%;
-  order: 1;
-  margin-left: 60px;
-  margin-top: -49px;
+  flex: 1;
+  min-width: 300px;
+  padding: 0 10px; 
+  margin-top: 40px;/* Left-right padding for tablets */
 }
 
 .detail-box h3 {
-  font-size: 1.8rem;
+  font-size: 28px;
   margin-bottom: 15px;
-  color: #000;
 }
 
 .detail-box p {
-  color: #333;
-  line-height: 1.6;
+  font-size: 16px;
   margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 .video-box {
-  flex: 1 1 45%;
-  order: 2;
-  margin-top: 40px;
-  margin-right: 40px;
+  flex: 1;
+  min-width: 300px;
+  padding: 0 10px; /* Left-right padding for tablets */
+  margin-top: 40px;;
 }
 
 .video-box video {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 2px solid #000;
+  border-radius: 12px;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .product-slider-container {
+    padding: 30px 10px;
+  }
+
+  .slider-title {
+    font-size: 26px;
+  }
+
+  .product-card-box {
+    padding: 15px;
+  }
+
+  .product-image1 {
+    height: 200px;
+  }
+
   .video-detail-section {
     flex-direction: column;
-  }
-
-  .detail-box, .video-box {
-    flex: 1 1 100%;
-    order: unset;
-  }
-
-  .product-card {
-    height: auto;
+    padding: 0 10px;
   }
 }
