@@ -2,6 +2,8 @@
   background-color: #ffffff; /* Set white background */
   width: 100%;
   box-sizing: border-box;
+  margin-top: -34px;
+  
 }
 
 .bw-theme {
@@ -24,6 +26,7 @@
   padding-bottom: 5px;
   margin-top: 12px;
   width: 100%;
+  margin-top: -77px;
 }
 
 .about-hero-image {

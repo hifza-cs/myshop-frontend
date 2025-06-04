@@ -1,6 +1,7 @@
 .product-slider-container {
   padding: 40px 20px;
-background-color: white;  
+  background-color: white;
+  
 }
 
 .slider-title {
@@ -21,8 +22,10 @@ background-color: white;
 }
 
 .product-card-box {
+  background: #fff;
   border-radius: 15px;
   padding: 20px;
+  margin-top: 20px; /* Added top margin for cards */
   text-align: center;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -30,8 +33,6 @@ background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 22px;
-  
 }
 
 .product-card-box:hover {
@@ -40,12 +41,12 @@ background-color: white;
 }
 
 .product-image1 {
-  width: 60%;
-  height: 280px;
+  width: 70%;
+  height: 278px;
   border-radius: 10px;
   margin-bottom: 15px;
   margin-top: 12px;
-  margin-left: 74px;
+  margin-left: 50px;
 }
 
 .product-name {
@@ -142,4 +143,4 @@ background-color: white;
     flex-direction: column;
     padding: 0 10px;
   }
-}
+}  
